@@ -66,6 +66,7 @@ describe('index.js', () => {
         showCommits(el)
         requests[0].respond(200, contentType, commitsData())
         expect(requests[0].url).toMatch(/https:\/\/api.github.com\/repos\/owner\/repo\/commits/)
+        console.log(window.$('#details').html())
         expect(window.$('#details').html()).toMatch(/6dcb09b5b57875f334f61aebed695e2e4193db5e/)
       })
     })
